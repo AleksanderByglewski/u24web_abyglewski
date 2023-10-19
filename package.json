@@ -1,0 +1,20 @@
+{
+	"name": "U24web-plugin",
+	"version": "0.1.0",
+	"description": "Giveaway and Reward plugin.",
+	"author": "U24web",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.3.0",
+		"prettier": "npm:wp-prettier@^2.2.1-beta-1"
+	}
+}
