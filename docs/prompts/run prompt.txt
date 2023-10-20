@@ -1,0 +1,61 @@
+Hi chat i have this template block for gutenberg. And I have a block that i would like to rewrite in a similiar fashion 
+Write me the whole code for this file. Use Innerblocks to insert new components if necessary into this file.
+At the end provide me with the list of names of the components that i need to create.
+Don't write me any instructions about proper use. 
+This the HTML code:
+The name of element is u24web/contact-input
+
+I would also like to specify the name and placeholder with InspectorControls
+<div class="col-md-6 col-12 mb-3 ps-md-1 ps-3 pe-3 ps-md-1 pe-md-0">
+                    <input style="border-color:var(--light-brown-color); color:#fff;" type="number" class="form-control bg-transparent py-2 py-md-3" name="phone" placeholder="Phone">
+</div>
+    
+
+
+This is the template file: 
+/*Rejestracja statycznego contentu */
+import { registerBlockType } from '@wordpress/blocks';
+import { useBlockProps, RichText, InspectorControls, InnerBlocks } from '@wordpress/block-editor';
+import { TextControl } from '@wordpress/components';
+const MY_TEMPLATE = [
+// ["core/image", { placeholder: "Call to Action" }]
+];
+
+
+registerBlockType('u24web/template-text', {
+    title: 'Contact form',
+
+    attributes: {
+        textContent: {
+            type: 'string',
+            value: '',
+            default: 'OPERACJA FURIA'
+        },
+    },
+    edit: function (props) {
+        return (
+            <div >
+                <RichText
+                    tagName="h1"
+                    value={props.attributes.textContent}
+                    onChange={(value) => props.setAttributes({ textContent: value })}
+                />
+                <InnerBlocks
+                    template={MY_TEMPLATE}
+                    allowedBlocks={false}
+                />
+            </div>
+        );
+    },
+    save: function (props) {
+        return (
+            <div>
+                <RichText.Content
+                    value={props.attributes.textContent}
+                />
+                <InnerBlocks.Content />
+            </div>
+
+        );
+    },
+});

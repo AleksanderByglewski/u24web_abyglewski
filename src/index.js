@@ -28,7 +28,7 @@ import './blocks/testing/card/card-footer'
 import './blocks/slider/wrapper'
 import './blocks/slider/slide'
 
-import './fame/image/core'
+// import './fame/image/core'
 
 
 import './blocks/finisher/1'
@@ -47,12 +47,25 @@ import './blocks/swiper/images/1-2'
 
 import './tutorial-block/media-upload'
 
+import './tutorial-block/again'
+
+
 import './style.scss';
 
 // import edit from "./edit";
 // import save from './save';
+import './blocks/contact-form/1-contact-section.js';
+import './blocks/contact-form/1-1-contact-title.js';
+import './blocks/contact-form/1-2-contact-description.js';
+import './blocks/contact-form/1-3-1-contact-form.js';
+import './blocks/contact-form/1-3-2-1-contact-message-textarea.js';
+import './blocks/contact-form/1-3-2-2-contact-preference-select.js';
+import './blocks/contact-form/1-3-2-3-contact-submit-button.js';
+import './blocks/contact-form/1-3-2-contact-form-fields.js';
+import './blocks/contact-form/1-3-2-3-contact-input.js';
 
 
+import './blocks/contact-form/simple.js'
 
 
 /**
